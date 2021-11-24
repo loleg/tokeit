@@ -1,13 +1,14 @@
-# TokeIt!
+# tokit tokit
 
 This project is about digital and analogue (on-screen and physical) rendering and interaction with data. For details see the challenge page linked above.
 
 ## Tech Stack
 
-We are using lightweight tools like P5.js, Processing or D3.js to render tessellated hexagons (also known as hex bins) over a map.
+We are using lightweight tools like Deck.gl, P5.js, Processing or D3.js to render tessellated hexagons (also known as hex bins) over a map.
 
-TBD. Candidates:
+## Tech stack
 
+- https://deck.gl/docs/api-reference/core/deckgl
 - https://github.com/d3/d3-hexbin
 - https://openprocessing.org/sketch/1113831
 - https://github.com/Turfjs/turf/tree/master/packages/turf-hex-grid
