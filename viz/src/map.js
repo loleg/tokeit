@@ -3,17 +3,18 @@ import { Deck } from "@deck.gl/core";
 import mapboxgl from "maplibre-gl";
 
 const INITIAL_VIEW_STATE = {
-  longitude: 8.31,
-  latitude: 47.054,
-  zoom: 12,
+  longitude: 8.3095 ,
+  latitude: 47.05,
+  zoom: 13,
   bearing: 0,
-  pitch: 20
+  pitch: 1
 };
 
 const MAP_STYLE =
-  'https://vectortiles.geo.admin.ch/styles/ch.swisstopo.leichte-basiskarte.vt/style.json';
-  // 'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL';
-  // "https://basemaps.cartocdn.com/gl/positron-nolabels-gl-style/style.json";
+  require('../data/swiss_style.json');
+  // 'https://basemaps.cartocdn.com/gl/dark-matter-nolabels-gl-style/style.json';
+  // 'https://api.maptiler.com/tiles/v3/tiles.json?key=7r2P9F2eOXwOW6g3HfCo';
+  // 'https://raw.githubusercontent.com/nst-guide/osm-liberty-topo/gh-pages/style.json';
 
 class MapState {
   constructor() {
@@ -40,11 +41,12 @@ export function initMap(containerElement) {
     center: [INITIAL_VIEW_STATE.longitude, INITIAL_VIEW_STATE.latitude],
     zoom: INITIAL_VIEW_STATE.zoom,
     bearing: INITIAL_VIEW_STATE.bearing,
-    pitch: INITIAL_VIEW_STATE.pitch
+    pitch: INITIAL_VIEW_STATE.pitch,
+    hash: true
   });
 
   function calcTokits(num) {
-    return Math.round(num / 100);
+    return Math.round(num / 150);
   }
 
   const deck = new Deck({
@@ -62,7 +64,11 @@ export function initMap(containerElement) {
       });
     },
     getTooltip: ({object}) => object && object.properties && {
-      html: `<div class="num">${calcTokits(object.properties.NUMPOINTS)}</div><span class="label">Tokits</span><div class="coord">&#x1F4CC; ${object.properties.label}</div>`
+      html:
+            `<div class="coord">&#x1F4CC; ${object.properties.label}</div>` +
+            `<div class="num">${calcTokits(object.properties.NUMPOINTS)}</div>` +
+            `<span class="label">tokits</span>` +
+            `<div class="tower" style="height:${calcTokits(object.properties.NUMPOINTS)}em"></div>`
     }
   });
 

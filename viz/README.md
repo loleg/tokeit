@@ -1,4 +1,4 @@
-# tokitokit app
+# tokit tokit app
 
 An interactive data visualization.
 
@@ -9,20 +9,32 @@ To start server:
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+To compile and hot-reload for development:
 
 ```
 yarn start
 ```
 
-### Compiles and minifies for production
+To minify for production:
 
 ```
 yarn build
 ```
 
-## Links
+## Sources
 
-Created with CodeSandbox
+Created with:
+
+- Deck.gl
+- Maplibre
+- CodeSandbox
+- QGIS
+
+With thanks to:
+
+- Students & faculty @ HSLU DDA
+- FabLab Bern
+- BFS / LUSTAT
+- GeoAdmin / swisstopo
 
 [MIT License](LICENSE)
