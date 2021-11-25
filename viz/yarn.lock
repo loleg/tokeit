@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"0@underscore":
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/0/-/0-0.0.0.tgz#beabacb0a099c1dd215eaec15bb201318db7de6a"
+  integrity sha1-vqussKCZwd0hXq7BW7IBMY233mo=
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.16.0":
   version "7.16.0"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.16.0.tgz#0dfc80309beec8411e65e706461c408b0bb9b431"
@@ -5923,7 +5928,7 @@ uncss@^0.17.3:
     postcss-selector-parser "6.0.2"
     request "^2.88.0"
 
-underscore@:
+underscore@^1.13.1:
   version "1.13.1"
   resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.13.1.tgz#0c1c6bd2df54b6b69f2314066d65b6cde6fcf9d1"
   integrity sha512-hzSoAVtJF+3ZtiFX0VgfFPHEDRm7Y/QPjGyNo4TVdnDTdft3tr8hEkD25a1jC+TjTuE7tkHGKkhwCgs9dgBB2g==

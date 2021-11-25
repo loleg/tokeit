@@ -13,7 +13,8 @@
     "data": "^0.6.1",
     "deck.gl": "8.6.4",
     "maplibre-gl": "1.15.2",
-    "parcel-bundler": "1.12.5"
+    "parcel-bundler": "1.12.5",
+    "underscore": "^1.13.1"
   },
   "devDependencies": {
     "@babel/core": "7.2.0"
