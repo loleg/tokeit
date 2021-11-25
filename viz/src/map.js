@@ -7,7 +7,7 @@ const INITIAL_VIEW_STATE = {
   latitude: 47.054,
   zoom: 12,
   bearing: 0,
-  pitch: 0
+  pitch: 20
 };
 
 const MAP_STYLE =

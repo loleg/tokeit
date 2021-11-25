@@ -28,6 +28,24 @@ body {
   background: black;
 }
 
+#info {
+  position: fixed;
+  left: 50%; top: 5em;
+  margin-left: -20em;
+  width: 40em;
+  background: white;
+  padding: 1em;
+  border: 1px solid black;
+  z-index: 9;
+}
+
+#info .close {
+  float: right;
+  opacity: 0.6;
+  font-size: 200%;
+  cursor: pointer;
+}
+
 .deck-tooltip {
   width: auto !important;
   height: auto !important;

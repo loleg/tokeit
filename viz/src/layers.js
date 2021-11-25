@@ -12,7 +12,7 @@ export const populationLayer = (mapState) =>
     radius: 100,
     extruded: true,
     pickable: true,
-    elevationScale: 5,
+    elevationScale: 2,
     getPosition: (d) => [d.centroid[1], d.centroid[0]],
     getFillColor: (d) => [48, 128, d.value * 15, 255],
     getLineColor: [0, 0, 0],
