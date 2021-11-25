@@ -1,0 +1,25 @@
+{
+  "name": "tokitokit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An interactive data visualization",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "browser": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "data": "^0.6.1",
+    "deck.gl": "8.6.4",
+    "maplibre-gl": "1.15.2",
+    "parcel-bundler": "1.12.5"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0"
+  },
+  "resolutions": {
+    "@babel/preset-env": "7.13.8"
+  },
+  "keywords": []
+}
