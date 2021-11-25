@@ -43,6 +43,10 @@ export function initMap(containerElement) {
     pitch: INITIAL_VIEW_STATE.pitch
   });
 
+  function calcTokits(num) {
+    return Math.round(num / 100);
+  }
+
   const deck = new Deck({
     canvas: "deck-canvas",
     width: "100%",
@@ -58,7 +62,7 @@ export function initMap(containerElement) {
       });
     },
     getTooltip: ({object}) => object && object.properties && {
-      html: `<div class="title">${object.properties.label}</div><span class="label">Coordinate</span><p>${object.properties.NUMPOINTS}</p><span class="label">Population 2020</span>`
+      html: `<div class="num">${calcTokits(object.properties.NUMPOINTS)}</div><span class="label">Tokits</span><div class="coord">&#x1F4CC; ${object.properties.label}</div>`
     }
   });
 
