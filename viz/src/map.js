@@ -11,7 +11,8 @@ const INITIAL_VIEW_STATE = {
 };
 
 const MAP_STYLE =
-  'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL';
+  'https://vectortiles.geo.admin.ch/styles/ch.swisstopo.leichte-basiskarte.vt/style.json';
+  // 'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL';
   // "https://basemaps.cartocdn.com/gl/positron-nolabels-gl-style/style.json";
 
 class MapState {
