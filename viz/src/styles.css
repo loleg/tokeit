@@ -27,3 +27,20 @@ body {
   color: white;
   background: black;
 }
+
+.deck-tooltip {
+  width: auto !important;
+  height: auto !important;
+  padding: 1em !important;
+  border: 2px solid white;
+  border-radius: 1em;
+  background: white;
+  font-size: 120%;
+}
+.deck-tooltip p {
+  margin-bottom: 0px;
+}
+.deck-tooltip .label {
+  font-size: 80%;
+  opacity: 0.8;
+}

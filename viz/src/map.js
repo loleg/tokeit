@@ -11,7 +11,8 @@ const INITIAL_VIEW_STATE = {
 };
 
 const MAP_STYLE =
-  "https://basemaps.cartocdn.com/gl/positron-nolabels-gl-style/style.json";
+  'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL';
+  // "https://basemaps.cartocdn.com/gl/positron-nolabels-gl-style/style.json";
 
 class MapState {
   constructor() {
@@ -54,6 +55,9 @@ export function initMap(containerElement) {
         bearing: viewState.bearing,
         pitch: viewState.pitch
       });
+    },
+    getTooltip: ({object}) => object && object.properties && {
+      html: `<div class="title">${object.properties.label}</div><span class="label">Coordinate</span><p>${object.properties.NUMPOINTS}</p><span class="label">Population 2020</span>`
     }
   });
 
