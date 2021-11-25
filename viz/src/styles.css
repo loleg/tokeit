@@ -1,3 +1,6 @@
+@font-face{font-family:'FS Albert Web Regular';src:url("../data/FSAlbertWeb-Regular.woff2") format("woff2");font-weight:normal;font-style:normal}
+@font-face{font-family:'FS Albert Web Bold';src:url("../data/FSAlbertWeb-Bold.woff2") format("woff2");font-weight:bold;font-style:normal}
+
 body {
   font-family: "FS Albert Web Regular",Helvetica,sans-serif;
   line-height: 1.5;
@@ -78,9 +81,9 @@ body,html {
   height: auto !important;
   padding: 0.6em !important;
   border-radius: 0.5em;
-  opacity: 0.95;
+  opacity: 0.9;
   /* border: 1px solid rgba(255,255,255,0.8); */
-  box-shadow: 6px 6px 6px rgba(0,0,0,0.5);
+  box-shadow: 6px 6px 6px rgba(0,0,0,0.2);
   background: white !important;
   font-size: 150%;
   color: black !important;
@@ -95,13 +98,39 @@ body,html {
   font-size: 80%;
   font-weight: bold;
   font-family: monospace;
+  text-align: center;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #ccc;
+}
+.deck-tooltip .col {
+  width: 4em;
+  padding: 0.1em;
+  display: inline-block;
 }
 .deck-tooltip .label {
-  font-size: 90%;
+  font-size: 70%;
   opacity: 0.8;
   display: inline-block;
   clear: after;
-  margin-left: 0.4em;
+  margin-left: 0.2em;
+}
+.deck-tooltip .tower {
+  background: repeating-linear-gradient(
+    0deg,
+    #aa7,
+    #aa7 1em,
+    #772 1em,
+    #772 2em
+  );
+}
+.deck-tooltip .future .tower {
+  background: repeating-linear-gradient(
+    0deg,
+    #707dcc,
+    #707dcc 1em,
+    #465298 1em,
+    #465298 2em
+  );
 }
 .deck-tooltip .tower {
   font-size: 50%;
@@ -110,11 +139,4 @@ body,html {
   border-right-color: #999;
   border-radius: 1px;
   margin-top: 5px;
-  background: repeating-linear-gradient(
-    0deg,
-    #707dcc,
-    #707dcc 1em,
-    #465298 1em,
-    #465298 2em
-  );
 }

@@ -28,19 +28,8 @@ export const referenceLayer = (mapState) =>
     // Styles
     filled: true,
     stroked: false,
-    // pointRadiusMinPixels: 2,
-    // pointRadiusScale: mapState.airportRadius,
-    // getPointRadius: (f) => 11 - f.properties.scalerank,
     getFillColor: [0, 0, 0, 80],
     // Interactive props
     pickable: true,
-    autoHighlight: true,
-    // updateTriggers: {
-    //   getPointRadiusScale: [mapState.airportRadius]
-    // },
-    // onClick: (info) => {
-    //   // eslint-disable-next-line
-    //   if (info.object)
-    //     info.object.properties.label = 'blah'
-    // }
+    autoHighlight: true
   });
