@@ -15,7 +15,7 @@ export const populationLayer = (mapState) =>
     pickable: false,
     elevationScale: 0.8,
     getPosition: (d) => [d.centroid[1], d.centroid[0]],
-    getFillColor: (d) => [0, 0, d.value*20, 255],
+    getFillColor: (d) => [0, 0, (d.value-100)*20, 255],
     getLineColor: [0, 0, 0],
     getElevation: (d) => d.value
   });

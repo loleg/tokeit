@@ -51,6 +51,10 @@ export function initMap(containerElement) {
   function calcTokits2(num) {
     return Math.round(calcTokits(num) * 1.2);
   }
+  function calcTokits2plus(num) {
+    let c = calcTokits(num);
+    return Math.round(c * 1.2) - c;
+  }
 
   const deck = new Deck({
     canvas: "deck-canvas",
@@ -73,10 +77,13 @@ export function initMap(containerElement) {
               `<div class="num">${calcTokits(object.properties.NUMPOINTS)}</div>` +
               `<span class="label">in 2020</span>` +
               `<div class="tower" style="height:${calcTokits(object.properties.NUMPOINTS)}em"></div>` +
-            `</div><div class="col future">` +
-              `<div class="num">${calcTokits2(object.properties.NUMPOINTS)}</div>` +
-              `<span class="label">in 2030?</span>` +
-              `<div class="tower" style="height:${calcTokits2(object.properties.NUMPOINTS)}em"></div>` +
+            // `</div><div class="col future">` +
+            //   `<div class="num">${calcTokits2(object.properties.NUMPOINTS)}</div>` +
+              `<div class="future">` +
+                `<div class="num">+${calcTokits2plus(object.properties.NUMPOINTS)}</div>` +
+                `<span class="label">in 2030</span>` +
+                `<div class="tower" style="height:${calcTokits2plus(object.properties.NUMPOINTS)}em"></div>` +
+              `</div>` +
             `</div>`
     }
   });

@@ -92,6 +92,7 @@ body,html {
   margin-bottom: 0px;
 }
 .deck-tooltip .num {
+  margin-top: 0.1em;
   display: inline-block;
 }
 .deck-tooltip .coord {
@@ -109,12 +110,12 @@ body,html {
 }
 .deck-tooltip .label {
   font-size: 70%;
-  opacity: 0.8;
+  opacity: 0.6;
   display: inline-block;
   clear: after;
   margin-left: 0.2em;
 }
-.deck-tooltip .tower {
+.deck-tooltip .future .tower {
   background: repeating-linear-gradient(
     0deg,
     #aa7,
@@ -123,7 +124,7 @@ body,html {
     #772 2em
   );
 }
-.deck-tooltip .future .tower {
+.deck-tooltip .tower {
   background: repeating-linear-gradient(
     0deg,
     #707dcc,
