@@ -8,3 +8,7 @@ map.addLayers([populationLayer, referenceLayer]);
 document.getElementById("info").onclick = () => {
   document.getElementById("info").style.display = 'none';
 };
+
+document.getElementById("tools").onclick = () => {
+  document.getElementById("info").style.display = 'block';
+};

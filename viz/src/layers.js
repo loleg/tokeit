@@ -31,5 +31,25 @@ export const referenceLayer = (mapState) =>
     getFillColor: [0, 0, 0, 80],
     // Interactive props
     pickable: true,
-    autoHighlight: true
+    autoHighlight: true,
+    onClick: (info) => {
+      if (info.object && info.object.properties) {
+        console.debug(info.object.properties);
+        // `(${info.object.properties.abbrev})`)
+      }
+      resetTimer();
+    }
   });
+
+  // Open info-box after a delay (e.g. 100s)
+  const TIME_OUT = 100 * 1000;
+  let timer = Date.now();
+  function resetTimer() { timer = Date.now(); }
+  function checkTimer() {
+    if (Date.now() - timer > TIME_OUT) {
+      document.getElementById("info").style.display = 'block';
+      resetTimer();
+    }
+    setTimeout(checkTimer, 1000);
+  }
+  setTimeout(checkTimer, 1000);
