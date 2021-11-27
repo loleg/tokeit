@@ -4,6 +4,7 @@
 body {
   font-family: "FS Albert Web Regular",Helvetica,sans-serif;
   line-height: 1.5;
+  background: #ccc;
 }
 
 body,html {
@@ -87,6 +88,7 @@ body,html {
   background: white !important;
   font-size: 150%;
   color: black !important;
+  text-align: center;
 }
 .deck-tooltip p {
   margin-bottom: 0px;
