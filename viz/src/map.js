@@ -10,11 +10,7 @@ const INITIAL_VIEW_STATE = {
   pitch: 1
 };
 
-const MAP_STYLE =
-  // require('../data/swiss_style.json');
-  'https://api.maptiler.com/maps/ch-swisstopo-lbm-dark/style.json?key=7r2P9F2eOXwOW6g3HfCo';
-  // 'https://basemaps.cartocdn.com/gl/dark-matter-nolabels-gl-style/style.json';
-  // 'https://raw.githubusercontent.com/nst-guide/osm-liberty-topo/gh-pages/style.json';
+const MAP_STYLE = require('../data/swiss_style.json');
 
 class MapState {
   constructor() {
@@ -35,7 +31,7 @@ export function initMap(containerElement) {
 
   const maplibre = new mapboxgl.Map({
     container: "map",
-    // style: MAP_STYLE,
+    style: MAP_STYLE,
     // Note: deck.gl will be in charge of interaction and event handling
     interactive: false,
     center: [INITIAL_VIEW_STATE.longitude, INITIAL_VIEW_STATE.latitude],
@@ -83,16 +79,21 @@ export function initMap(containerElement) {
         `<div class="coord">&#x1F4CC; ${object.properties.label}</div>` +
         `<div class="col">` +
           (calcTokits(object.properties.NUMPOINTS) > 0 ?
-            `<div class="num">${calcTokits(object.properties.NUMPOINTS)}</div>` +
-            `<span class="label">in 2020</span>` +
-            `<div class="tower" style="height:${calcTokits(object.properties.NUMPOINTS)}em"></div>` +
+
             (calcTokits2plus(object.properties.NUMPOINTS) > 0 ?
               `<div class="future">` +
-                `<div class="tower" style="height:${calcTokits2plus(object.properties.NUMPOINTS)}em"></div>` +
                 `<div class="num">+${calcTokits2plus(object.properties.NUMPOINTS)}</div>` +
                 `<span class="label">in 2030</span>` +
-              `</div>` : ``) : ``) +
-          `<span class="label actual">🧍 ${object.properties.NUMPOINTS}</span>` +
+                `<div class="tower" style="height:${calcTokits2plus(object.properties.NUMPOINTS)}em"></div>` +
+              `</div>`
+              : ``) +
+
+            `<div class="tower" style="height:${calcTokits(object.properties.NUMPOINTS)}em"></div>` +
+            `<div class="num">${calcTokits(object.properties.NUMPOINTS)}</div>` +
+            `<span class="label">in 2020</span>`
+             : ``) +
+
+          `<span class="label actual">🧍≈ ${object.properties.NUMPOINTS}</span>` +
         `</div>`
     }
   });

@@ -51,13 +51,13 @@ body,html {
 }
 
 #info {
-  background: #fff url(https://www.hslu.ch/-/media/campus/common/images/moodboard/dk/dk-studium/bachelor/dk-data-design-and-art/dk-dda-moodboard-01-211124.jpg?la=de-ch&centercrop=1&h=420&w=1306&usecustomfunctions=1) no-repeat top left;
+  background: #fff url(../data/IMG_20211126_100359-01.jpg) no-repeat top left;
   background-size: 44em auto;
   position: fixed;
   left: 50%; top: 5em;
   margin-left: -20em;
   width: 40em;
-  padding: 14em 2em 1em;
+  padding: 13em 2em 1em;
   box-shadow: 6px 6px 6px rgba(0,0,0,0.5);
   z-index: 9;
 }
