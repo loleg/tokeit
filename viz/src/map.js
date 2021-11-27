@@ -35,7 +35,7 @@ export function initMap(containerElement) {
 
   const maplibre = new mapboxgl.Map({
     container: "map",
-    style: MAP_STYLE,
+    // style: MAP_STYLE,
     // Note: deck.gl will be in charge of interaction and event handling
     interactive: false,
     center: [INITIAL_VIEW_STATE.longitude, INITIAL_VIEW_STATE.latitude],
@@ -61,7 +61,7 @@ export function initMap(containerElement) {
     width: "100%",
     height: "100%",
     initialViewState: INITIAL_VIEW_STATE,
-    controller: true,
+    controller: {doubleClickZoom: false, inertia: true},
     onViewStateChange: ({ viewState }) => {
       maplibre.jumpTo({
         center: [viewState.longitude, viewState.latitude],
